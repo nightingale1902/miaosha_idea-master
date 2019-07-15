@@ -13,7 +13,8 @@ import com.ljs.miaosha.vo.GoodsVo;
 public class GoodsService {
 	public static final String COOKIE1_NAME_TOKEN="token";
 	
-	@Autowired
+	//@Autowired
+	@Autowired(required = false)
 	GoodsDao goodsDao;
 	@Autowired
 	RedisService redisService;

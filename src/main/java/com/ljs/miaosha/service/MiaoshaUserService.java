@@ -19,8 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 @Service
 public class MiaoshaUserService {
 	public static final String COOKIE1_NAME_TOKEN="token";
-	
-	@Autowired
+
+	// @Autowired
+	@Autowired(required = false)
 	MiaoshaUserDao miaoshaUserDao;
 	@Autowired
 	RedisService redisService;

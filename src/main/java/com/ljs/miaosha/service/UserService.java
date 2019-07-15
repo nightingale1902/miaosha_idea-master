@@ -8,7 +8,8 @@ import com.ljs.miaosha.domain.User;
 
 @Service
 public class UserService {
-	@Autowired
+	//@Autowired
+	@Autowired(required = false)
 	UserDao userDao;
 	public User getById(int id) {
 		return userDao.getById(id);

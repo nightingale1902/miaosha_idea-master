@@ -15,7 +15,8 @@ import java.util.Date;
 
 @Service
 public class OrderService {
-	@Autowired
+	//@Autowired
+	@Autowired(required = false)
 	OrderDao orderDao;
 	@Autowired
 	RedisService redisService;
@@ -33,7 +34,7 @@ public class OrderService {
 	 * 判断是否秒杀到某商品，即去miaosha_order里面去查找是否有记录userId和goodsId的一条数据。
 	 * 根据用户userId和goodsId判断是否有者条订单记录，有则返回此纪录
 	 * 
-	 * @param id
+	 * @param userId
 	 * @param goodsId
 	 * @return
 	 */
@@ -95,7 +96,7 @@ public class OrderService {
 	 * 代码1.0
 	 * 根据用户userId和goodsId判断是否有者条订单记录，有则返回此纪录
 	 * 
-	 * @param id
+	 * @param userId
 	 * @param goodsId
 	 * @return
 	 */
